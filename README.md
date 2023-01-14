@@ -22,7 +22,7 @@ These files deal with adding new data to the feature group every day. The weathe
 ### 3_feature_views_and_training_dataset.ipynb – 
 This file deals with data preprocessing and preparation of training data. Standardization is done on all the features except the “conditions” feature. The “conditions” feature is label encoded. The training data is created on Hopsworks using the ‘create_training_data’ function.
 
-### 4_model_training-Copy1.ipynb –
+### 4_model_training.ipynb –
 This file deals with the creation and training of the model. Firstly, the data is sorted according to the date, from the latest to the oldest. 70% of the data is used for training while 15% is used for testing and validation each. The data is split in a manner to ensure that the oldest data compose the training while the latest data compose the testing. The X_train, X_test and X_val contain 28 features. The labels (y) consist of the aqi values for the next seven days corresponding to each instance in X. 
 The model consists of two LSTM layers with 256 and 128 neurons respectively. A dropout of 0.5 is added. RMSprop is used as the optimizer with a learning rate of 0.01. Mean squared error is the loss used to evaluate the model using training. The training and validation losses are given below – 
 
